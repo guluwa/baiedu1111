@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">宛禺阁文创</string>
+    <string name="notifyTitle">宛禺阁文创</string>
+    <string name="notifyMsg">没有必要的权限，应用程序将无法正常工作。\n\n请单击“设置”-“权限”-打开所需的权限。</string>
+    <string name="setting">设置</string>
+    <string name="cancel">取消</string>
+
+    <string name="network_error">网络请求超时，请检查网络状态！</string>
+    <string name="data_format_error">数据格式错误！</string>
+    <string name="user_data_error">用户数据错误，请重新登录！</string>
+    <string name="data_error">数据错误！</string>
+    <string name="network_request_error">网络请求错误！</string>
+    <string name="user_info_over_time_error">用户信息过期，请再试一次！</string>
+    <string name="other_error">其它错误</string>
+
+    <string name="please_wait">请稍候！</string>
+    <string name="data_wrong">数据出错</string>
+
+    <string name="school_register">学校申请入驻</string>
+    <string name="edit_account_hint">请输入您的用户名。</string>
+    <string name="edit_password_hint">请输入您的密码。</string>
+    <string name="edit_phone_hint">请输入您的电话号码。</string>
+    <string name="edit_school_name_hint">请输入学校名称。</string>
+    <string name="edit_school_address_hint">请输入学校地址。</string>
+    <string name="primary_school">小学</string>
+    <string name="junior_middle_school">初中</string>
+    <string name="senior_middle_school">高中</string>
+    <string name="university">大学</string>
+    <string name="register">注册</string>
+    <string name="register_success">注册成功</string>
+    <string name="register_failed">注册失败</string>
+
+    <string name="edit_user_name_hint">请输入你的名字。</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="student">学生</string>
+    <string name="parents">家长</string>
+    <string name="teacher">老师</string>
+
+    <string name="login">登录</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_failed">登录失败</string>
+
+    <string name="menu_my_class">我的班级</string>
+    <string name="menu_my_work">我的作业</string>
+    <string name="menu_setting">设置</string>
+    <string name="menu_children">我的孩子</string>
+    <string name="menu_mistakes">错题集</string>
+    <string name="menu_child_class">孩子的班级</string>
+    <string name="menu_child_work">孩子的作业</string>
+
+    <string name="class_explain">班级/同事/学生/课表</string>
+    <string name="work_explain">发布作业/批改作业</string>
+    <string name="children_explain">掌握孩子学习情况</string>
+
+    <string name="children_class_explain">老师/同学/课表</string>
+    <string name="children_work_explain">查看作业/老师的批改</string>
+    <string name="children_mistake_explain">自定义/分类错题集</string>
+    <string name="children_quiz_explain">向老师提问</string>
+
+    <string name="teacher_quiz_explain">回复学生提问</string>
+
+    <string name="join_class">加入班级</string>
+    <string name="query">查询</string>
+    <string name="join">加入</string>
+    <string name="query_result">查询结果</string>
+    <string name="query_failed">查询失败</string>
+    <string name="edit_class_number_hint">请输入班号</string>
+    <string name="join_failed">加入失败</string>
+    <string name="join_success">加入成功</string>
+
+    <string name="setting_menu_avatar">头像</string>
+    <string name="setting_menu_name">用户名</string>
+    <string name="setting_menu_identity">身份</string>
+    <string name="setting_menu_sex">性别</string>
+    <string name="setting_menu_phone">电话号码</string>
+    <string name="setting_menu_version">APP版本</string>
+    <string name="setting_menu_language">语言</string>
+    <string name="setting_menu_cache">缓存</string>
+    <string name="setting_menu_password">密码</string>
+    <string name="setting_menu_logout">退出</string>
+    <string name="setting_menu_logout_success">退出成功</string>
+    <string name="cache_clear_success">缓存清理成功</string>
+    <string name="avatar_upload_failed">头像上传失败，请重新选择。</string>
+
+    <string name="change">更改</string>
+    <string name="change_password">更改密码</string>
+    <string name="change_name">更改用户名</string>
+    <string name="change_sex">更改性别</string>
+    <string name="change_phone">更改电话号码</string>
+    <string name="change_success">更改成功</string>
+    <string name="change_failed">更改失败</string>
+
+    <string name="set_homework">布置作业</string>
+    <string name="publish">发布</string>
+    <string name="edit_home_work_hint">请输入作业内容。</string>
+    <string name="pic_select_failed">图片选择失败，请重新选择。</string>
+    <string name="curriculum">课程表</string>
+
+    <string name="class_information">班级详情</string>
+    <string name="class_number">班级号：</string>
+    <string name="class_name">班级名称：</string>
+    <string name="class_school">学校：</string>
+    <string name="class_teachers">班级老师</string>
+    <string name="class_students">班级学生</string>
+
+    <string name="see_details">查看详情</string>
+    <string name="no_more_records">没有更多记录</string>
+    <string name="homework_details">作业详情</string>
+    <string name="submitted_homework">已提交作业</string>
+    <string name="publish_date">发布日期：</string>
+    <string name="my_homework_result">我的作业结果</string>
+    <string name="child_homework_result">孩子的作业结果</string>
+    <string name="homework_result">作业结果</string>
+
+    <string name="homework_pictures">作业图片</string>
+    <string name="publish_success">发布成功</string>
+    <string name="publish_failed">发布失败</string>
+
+    <string name="do_btn">做</string>
+    <string name="do_homework">做作业</string>
+    <string name="edit_home_work_result_hint">请输入作业结果内容。</string>
+    <string name="homework_result_pictures">作业结果图片</string>
+    <string name="do_success">成功完成</string>
+    <string name="do_failed">完成失败</string>
+    <string name="people_have_submitted">已提交的学生（们）</string>
+    <string name="home_work_have_not_submit">你还没有提交作业！</string>
+    <string name="corrected">已批改</string>
+    <string name="uncorrected">未批改</string>
+    <string name="do_date">完成日期：</string>
+    <string name="homework_result_correction">作业批改</string>
+    <string name="home_work_have_not_correct">作业尚未批改</string>
+
+    <string name="edit_password_old_hint">请输入您的旧密码。</string>
+    <string name="edit_password_new_hint">请输入您的新密码。</string>
+    <string name="edit_password_repeat_hint">请再次输入您的新密码。</string>
+    <string name="change_password_tip">两次输入的新密码必须一致！</string>
+
+    <string name="correct">批改</string>
+    <string name="correct_success">批改成功</string>
+    <string name="correct_failed">批改失败</string>
+    <string name="edit_home_work_correct_hint">请输入作业批改内容</string>
+    <string name="plz_correct_all_home_work_pics">请批改所有的作业图片</string>
+    <string name="correct_homework_pictures">已批改的作业图片</string>
+
+    <string name="my_messages">我的消息</string>
+    <string name="have_read">已读</string>
+    <string name="unread">未读</string>
+    <string name="message_detail">消息详情</string>
+    <string name="message_date">消息日期：</string>
+    <string name="new_message">新消息</string>
+
+    <string name="home">首页</string>
+    <string name="live">直播</string>
+    <string name="message">消息</string>
+    <string name="me">我</string>
+
+    <string name="correct_date">批改日期：</string>
+    <string name="add">添加</string>
+    <string name="add_failed">添加失败</string>
+    <string name="add_success">添加成功</string>
+    <string name="add_mistakes_collection">添加错题集</string>
+    <string name="edit_mistakes_collection_name_hint">请输入错题集名称</string>
+    <string name="update_mistakes_collection">更新错题集</string>
+    <string name="update">更新</string>
+    <string name="delete">删除</string>
+    <string name="delete_failed">删除失败</string>
+    <string name="update_failed">更新失败</string>
+    <string name="add_mistake">添加错题</string>
+
+    <string name="edit_mistake_content_hint">请输入错题内容。</string>
+    <string name="mistake_pictures">错题图片</string>
+    <string name="edit_mistake_answer_content_hint">请输入错题答案内容。</string>
+    <string name="mistake_answer_pictures">错题答案图片</string>
+    <string name="edit_mistake_remark_content_hint">请输入错题备注内容。</string>
+
+    <string name="bind">绑定</string>
+    <string name="bind_child">绑定孩子</string>
+    <string name="bind_failed">绑定失败</string>
+    <string name="bind_success">绑定成功</string>
+    <string name="edit_child_name_hint">请输入孩子的姓名。</string>
+    <string name="add_date">添加日期：</string>
+    <string name="mistake_detail">错误详情</string>
+    <string name="answer_detail">答案详情</string>
+    <string name="delete_btn">删除</string>
+
+    <string name="my_post">我的职务：</string>
+    <string name="finish">完成</string>
+    <string name="name">姓名：</string>
+    <string name="sex">性别：</string>
+    <string name="empty">空</string>
+
+    <string name="have_not_join_class">还没有加入班级！</string>
+    <string name="have_join_class">已加入班级！</string>
+    <string name="have_no_message">还没有消息！</string>
+    <string name="have_no_child">还没有绑定孩子！</string>
+    <string name="have_no_class">还没有班级！</string>
+    <string name="have_no_work">还没有作业！</string>
+    <string name="have_no_mistake_book">还没有错题集！</string>
+    <string name="have_no_mistake">还没有错题！</string>
+    <string name="teacher_have_no_mobile">还没有绑定手机号码！</string>
+    <string name="child_have_no_class">孩子还没有加入班级！</string>
+    <string name="child_have_no_mistake_book">孩子还没有错题集！</string>
+    <string name="child_have_no_mistake">孩子还没有错题！</string>
+    <string name="child_home_work_have_not_submit">孩子还没有提交作业！</string>
+
+    <string name="hold_to_talk">按住说话</string>
+    <string name="play">播放</string>
+
+    <string name="student_menu_join_class">加入班级</string>
+    <string name="student_menu_class">班级</string>
+    <string name="student_menu_homework">作业</string>
+    <string name="student_menu_curriculum">课程表</string>
+    <string name="student_menu_mistakes">错题</string>
+    <string name="student_menu_quiz">提问</string>
+    <string name="quiz_detail">提问详情</string>
+
+    <string name="download_success">下载成功</string>
+    <string name="download_failed">下载失败</string>
+    <string name="app_update_failed">更新失败，请扫描二维码下载最新版本。</string>
+    <string name="download_click_open">点击下载后打开</string>
+    <string name="open_permission">打开权限以允许自动安装APP。</string>
+
+    <string name="say_something">对TA说</string>
+    <string name="plz_say_something">请输入说话内容。</string>
+
+    <string name="update_hints">更新提示</string>
+    <string name="update_btn">更新</string>
+    <string name="plz_enable_system_download">请开启系统下载</string>
+    <string name="received">收件箱</string>
+    <string name="send">发送</string>
+    <string name="sent">发件箱</string>
+    <string name="send_failed">发送失败</string>
+    <string name="send_success">发送成功</string>
+    <string name="pay_success">支付成功</string>
+    <string name="pay_failed">支付失败</string>
+    <string name="reply">回复：</string>
+    <string name="edit_user_phone_hint">请输入电话号码</string>
+    <string name="edit_user_email_hint">请输入E-mail</string>
+    <string name="child_learn_status">孩子学习情况</string>
+    <string name="num_of_homework_times">一个月内完成作业的数量：</string>
+    <string name="num_of_mistake_books">错题集数量：</string>
+    <string name="num_of_mistakes">一个月内添加错误的数量：</string>
+    <string name="live_courses">直播课程</string>
+</resources>

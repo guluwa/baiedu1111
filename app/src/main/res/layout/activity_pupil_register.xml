@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_act_login_bg"
+        tools:context=".ui.main.register.pupil.PupilRegisterActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/mGuidelineBackTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.046" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/mGuidelineBackStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.029" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:src="@drawable/ic_back_white"
+            app:layout_constraintStart_toStartOf="@+id/mGuidelineBackStart"
+            app:layout_constraintTop_toTopOf="@+id/mGuidelineBackTop"
+            app:layout_constraintWidth_percent="0.096" />
+
+        <TextView
+            android:id="@+id/tvToolBarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivBack"
+            app:layout_constraintWidth_percent="0.65" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/mGuidelineImageTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.11" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mGuidelineImageTop">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivAppLogo"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.23" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/mGuideLineEditLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.072" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/mGuideLineEditRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.928" />
+
+                <ImageView
+                    android:id="@+id/ivAccount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_account"
+                    app:layout_constraintBottom_toBottomOf="@+id/etAccount"
+                    app:layout_constraintStart_toStartOf="@+id/mGuideLineEditLeft"
+                    app:layout_constraintTop_toTopOf="@+id/etAccount"
+                    app:layout_constraintWidth_percent="0.06" />
+
+                <EditText
+                    android:id="@+id/etAccount"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@null"
+                    android:hint="@string/edit_account_hint"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/edit_text_hint_color_new"
+                    android:textSize="15sp"
+                    app:layout_constraintDimensionRatio="1:0.1"
+                    app:layout_constraintEnd_toEndOf="@+id/mGuideLineEditRight"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/ivAccount"
+                    app:layout_constraintTop_toBottomOf="@+id/ivAppLogo" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/edit_text_indicator_color"
+                    app:layout_constraintEnd_toEndOf="@+id/mGuideLineEditRight"
+                    app:layout_constraintStart_toStartOf="@+id/mGuideLineEditLeft"
+                    app:layout_constraintTop_toBottomOf="@+id/etAccount" />
+
+                <ImageView
+                    android:id="@+id/ivPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_password"
+                    app:layout_constraintBottom_toBottomOf="@+id/etPassword"
+                    app:layout_constraintStart_toStartOf="@+id/mGuideLineEditLeft"
+                    app:layout_constraintTop_toTopOf="@+id/etPassword"
+                    app:layout_constraintWidth_percent="0.06" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@null"
+                    android:hint="@string/edit_password_hint"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/edit_text_hint_color_new"
+                    android:textSize="15sp"
+                    app:layout_constraintDimensionRatio="1:0.1"
+                    app:layout_constraintEnd_toEndOf="@+id/mGuideLineEditRight"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/ivPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/etAccount" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/edit_text_indicator_color"
+                    app:layout_constraintEnd_toEndOf="@+id/mGuideLineEditRight"
+                    app:layout_constraintStart_toStartOf="@+id/mGuideLineEditLeft"
+                    app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+                <ImageView
+                    android:id="@+id/ivName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_user_name"
+                    app:layout_constraintBottom_toBottomOf="@+id/etName"
+                    app:layout_constraintStart_toStartOf="@+id/mGuideLineEditLeft"
+                    app:layout_constraintTop_toTopOf="@+id/etName"
+                    app:layout_constraintWidth_percent="0.06" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@null"
+                    android:hint="@string/edit_user_name_hint"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/edit_text_hint_color_new"
+                    android:textSize="15sp"
+                    app:layout_constraintDimensionRatio="1:0.1"
+                    app:layout_constraintEnd_toEndOf="@+id/mGuideLineEditRight"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/ivName"
+                    app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/edit_text_indicator_color"
+                    app:layout_constraintEnd_toEndOf="@+id/mGuideLineEditRight"
+                    app:layout_constraintStart_toStartOf="@+id/mGuideLineEditLeft"
+                    app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+                <ImageView
+                    android:id="@+id/ivPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_user_phone"
+                    app:layout_constraintBottom_toBottomOf="@+id/etPhone"
+                    app:layout_constraintStart_toStartOf="@+id/mGuideLineEditLeft"
+                    app:layout_constraintTop_toTopOf="@+id/etPhone"
+                    app:layout_constraintWidth_percent="0.06" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@null"
+                    android:hint="@string/edit_user_phone_hint"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/edit_text_hint_color_new"
+                    android:textSize="15sp"
+                    app:layout_constraintDimensionRatio="1:0.1"
+                    app:layout_constraintEnd_toEndOf="@+id/mGuideLineEditRight"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/ivName"
+                    app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/edit_text_indicator_color"
+                    app:layout_constraintEnd_toEndOf="@+id/mGuideLineEditRight"
+                    app:layout_constraintStart_toStartOf="@+id/mGuideLineEditLeft"
+                    app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+
+                <ImageView
+                    android:id="@+id/ivEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_user_eamil"
+                    app:layout_constraintBottom_toBottomOf="@+id/etEmail"
+                    app:layout_constraintStart_toStartOf="@+id/mGuideLineEditLeft"
+                    app:layout_constraintTop_toTopOf="@+id/etEmail"
+                    app:layout_constraintWidth_percent="0.06" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@null"
+                    android:hint="@string/edit_user_email_hint"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/edit_text_hint_color_new"
+                    android:textSize="15sp"
+                    app:layout_constraintDimensionRatio="1:0.1"
+                    app:layout_constraintEnd_toEndOf="@+id/mGuideLineEditRight"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/ivName"
+                    app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/edit_text_indicator_color"
+                    app:layout_constraintEnd_toEndOf="@+id/mGuideLineEditRight"
+                    app:layout_constraintStart_toStartOf="@+id/mGuideLineEditLeft"
+                    app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+                <ImageView
+                    android:id="@+id/ivSex"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_user_sex"
+                    app:layout_constraintBottom_toBottomOf="@+id/mSexSpinner"
+                    app:layout_constraintStart_toStartOf="@+id/mGuideLineEditLeft"
+                    app:layout_constraintTop_toTopOf="@+id/mSexSpinner"
+                    app:layout_constraintWidth_percent="0.06" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/mSexSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintDimensionRatio="1:0.1"
+                    app:layout_constraintEnd_toEndOf="@+id/mGuideLineEditRight"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/ivName"
+                    app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/edit_text_indicator_color"
+                    app:layout_constraintEnd_toEndOf="@+id/mGuideLineEditRight"
+                    app:layout_constraintStart_toStartOf="@+id/mGuideLineEditLeft"
+                    app:layout_constraintTop_toBottomOf="@+id/mSexSpinner" />
+
+                <ImageView
+                    android:id="@+id/ivType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_school_type"
+                    app:layout_constraintBottom_toBottomOf="@+id/mTypeSpinner"
+                    app:layout_constraintStart_toStartOf="@+id/mGuideLineEditLeft"
+                    app:layout_constraintTop_toTopOf="@+id/mTypeSpinner"
+                    app:layout_constraintWidth_percent="0.06" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/mTypeSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintDimensionRatio="1:0.1"
+                    app:layout_constraintEnd_toEndOf="@+id/mGuideLineEditRight"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/ivType"
+                    app:layout_constraintTop_toBottomOf="@+id/mSexSpinner" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/edit_text_indicator_color"
+                    app:layout_constraintEnd_toEndOf="@+id/mGuideLineEditRight"
+                    app:layout_constraintStart_toStartOf="@+id/mGuideLineEditLeft"
+                    app:layout_constraintTop_toBottomOf="@+id/mTypeSpinner" />
+
+                <TextView
+                    android:id="@+id/tvSchoolRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="@string/school_register"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@+id/mGuideLineEditRight"
+                    app:layout_constraintTop_toBottomOf="@+id/mTypeSpinner" />
+
+                <TextView
+                    android:id="@+id/tvRegister"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/act_register_btn_bg"
+                    android:gravity="center"
+                    android:text="@string/register"
+                    android:textColor="@color/act_login_btn_text_color"
+                    android:textSize="18sp"
+                    app:layout_constraintDimensionRatio="1:0.15"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mTypeSpinner"
+                    app:layout_constraintWidth_percent="0.78" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

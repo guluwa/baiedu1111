@@ -1,0 +1,247 @@
+<resources>
+    <string name="app_name">منجز</string>
+    <string name="notifyTitle">Tips</string>
+    <string name="notifyMsg">Hi,the application will not work properly without the necessary permissions.\n\nPlease
+        click\"Setting\"-\"Permissions\"-Open the required permissions.
+    </string>
+    <string name="setting">Setting</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="network_error">Network request timeout, please check the network status!</string>
+    <string name="data_format_error">Data in wrong format!</string>
+    <string name="user_data_error">User data error, please login again！</string>
+    <string name="data_error">Data error!</string>
+    <string name="network_request_error">Network request error!</string>
+    <string name="user_info_over_time_error">User information expires, please try again!</string>
+    <string name="other_error">Other Error</string>
+
+    <string name="please_wait">Please wait a moment!</string>
+    <string name="data_wrong">The data is wrong.</string>
+
+    <string name="school_register">School Registration</string>
+    <string name="edit_account_hint">Please enter your account.</string>
+    <string name="edit_password_hint">Please enter your password.</string>
+    <string name="edit_phone_hint">Please enter your phone number.</string>
+    <string name="edit_school_name_hint">Please enter the name of the school.</string>
+    <string name="edit_school_address_hint">Please enter the school address.</string>
+    <string name="primary_school">Primary school</string>
+    <string name="junior_middle_school">Junior middle school</string>
+    <string name="senior_middle_school">Senior middle school</string>
+    <string name="university">University</string>
+    <string name="register">Register</string>
+    <string name="register_success">Register successfully</string>
+    <string name="register_failed">Register failed</string>
+
+    <string name="edit_user_name_hint">Please enter your name.</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="student">Student</string>
+    <string name="parents">Parents</string>
+    <string name="teacher">Teacher</string>
+
+    <string name="login">Login</string>
+    <string name="login_success">Login successfully</string>
+    <string name="login_failed">Login failed</string>
+
+    <string name="menu_my_class">My class</string>
+    <string name="menu_my_work">My homework</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_children">My children</string>
+    <string name="menu_mistakes">Mistakes collection</string>
+    <string name="menu_child_class">Child class</string>
+    <string name="menu_child_work">Child homework</string>
+
+    <string name="class_explain">Class/Colleague/Students/Curriculum</string>
+    <string name="work_explain">Publish/Correct homework</string>
+    <string name="children_explain">Know children\'s learning situation</string>
+
+    <string name="children_class_explain">Teachers/Classmates/Curriculum</string>
+    <string name="children_work_explain">Check homework/Teacher\'s correction</string>
+    <string name="children_mistake_explain">Customized/Categorized collection</string>
+    <string name="children_quiz_explain">Ask the teacher questions</string>
+
+    <string name="teacher_quiz_explain">Answer Students\' Questions</string>
+
+    <string name="join_class">Join class</string>
+    <string name="query">Query</string>
+    <string name="join">Join</string>
+    <string name="query_result">Query result</string>
+    <string name="query_failed">Query failed</string>
+    <string name="edit_class_number_hint">Please enter a class number.</string>
+    <string name="join_failed">Join failed</string>
+    <string name="join_success">Join successfully</string>
+
+    <string name="setting_menu_avatar">Avatar</string>
+    <string name="setting_menu_name">Name</string>
+    <string name="setting_menu_identity">Identity</string>
+    <string name="setting_menu_sex">Sex</string>
+    <string name="setting_menu_phone">Phone</string>
+    <string name="setting_menu_version">Version</string>
+    <string name="setting_menu_language">Language</string>
+    <string name="setting_menu_cache">Cache</string>
+    <string name="setting_menu_password">Password</string>
+    <string name="setting_menu_logout">Logout</string>
+    <string name="setting_menu_logout_success">Logout successfully</string>
+    <string name="cache_clear_success">Cache clear successfully</string>
+    <string name="avatar_upload_failed">The avatar upload failed, please re-select.</string>
+
+    <string name="change">Change</string>
+    <string name="change_password">Change password</string>
+    <string name="change_name">Change name</string>
+    <string name="change_sex">Change sex</string>
+    <string name="change_phone">Change phone</string>
+    <string name="change_success">Change successfully</string>
+    <string name="change_failed">Change failed</string>
+
+    <string name="set_homework">Set homework</string>
+    <string name="publish">Publish</string>
+    <string name="edit_home_work_hint">Please enter homework content.</string>
+    <string name="pic_select_failed">The pic select failed, please re-select.</string>
+    <string name="curriculum">Curriculum</string>
+
+    <string name="class_information">Class information</string>
+    <string name="class_number">Class number：</string>
+    <string name="class_name">Class name：</string>
+    <string name="class_school">School：</string>
+    <string name="class_teachers">Class teachers</string>
+    <string name="class_students">Class students</string>
+
+    <string name="see_details">See details</string>
+    <string name="no_more_records">No more records</string>
+    <string name="homework_details">Homework details</string>
+    <string name="submitted_homework">Submitted homework</string>
+    <string name="publish_date">Publish date：</string>
+    <string name="my_homework_result">My homework result</string>
+    <string name="child_homework_result">Child\'s homework result</string>
+    <string name="homework_result">Homework result</string>
+
+    <string name="homework_pictures">Homework pictures</string>
+    <string name="publish_success">Publish successfully</string>
+    <string name="publish_failed">Publish failed</string>
+
+    <string name="do_btn">Do</string>
+    <string name="do_homework">Do my homework</string>
+    <string name="edit_home_work_result_hint">Please enter homework result content.</string>
+    <string name="homework_result_pictures">Homework result pictures</string>
+    <string name="do_success">Do successfully</string>
+    <string name="do_failed">Do failed</string>
+    <string name="people_have_submitted">student(s) submitted</string>
+    <string name="home_work_have_not_submit">You have not submitted homework yet!</string>
+    <string name="corrected">Corrected</string>
+    <string name="uncorrected">Uncorrected</string>
+    <string name="do_date">Finish date：</string>
+    <string name="homework_result_correction">Homework correction</string>
+    <string name="home_work_have_not_correct">Homework has not been corrected!</string>
+
+    <string name="edit_password_old_hint">Please enter your old password.</string>
+    <string name="edit_password_new_hint">Please enter your new password.</string>
+    <string name="edit_password_repeat_hint">Please repeat your new password.</string>
+    <string name="change_password_tip">The new password entered twice must be consistent!</string>
+
+    <string name="correct">Correct</string>
+    <string name="correct_success">Correct successfully</string>
+    <string name="correct_failed">Correct failed</string>
+    <string name="edit_home_work_correct_hint">Please enter homework correction content.</string>
+    <string name="plz_correct_all_home_work_pics">Please correct all homework pictures.</string>
+    <string name="correct_homework_pictures">Corrected homework pictures</string>
+
+    <string name="my_messages">My messages</string>
+    <string name="have_read">Have read</string>
+    <string name="unread">Unread</string>
+    <string name="message_detail">Message detail</string>
+    <string name="message_date">Message Date:</string>
+    <string name="new_message">New message</string>
+
+    <string name="home">Home</string>
+    <string name="live">Live</string>
+    <string name="message">Message</string>
+    <string name="me">Me</string>
+
+    <string name="correct_date">Correct date：</string>
+    <string name="add">Add</string>
+    <string name="add_failed">Add failed</string>
+    <string name="add_success">Add successfully</string>
+    <string name="add_mistakes_collection">Add Mistakes collection</string>
+    <string name="edit_mistakes_collection_name_hint">Please enter mistakes collection name.</string>
+    <string name="update_mistakes_collection">Update Mistakes collection</string>
+    <string name="update">Update Mistakes collection</string>
+    <string name="delete">Delete Mistakes collection</string>
+    <string name="delete_failed">Delete failed</string>
+    <string name="update_failed">Update failed</string>
+    <string name="add_mistake">Add mistake</string>
+
+    <string name="edit_mistake_content_hint">Please enter mistake content.</string>
+    <string name="mistake_pictures">Mistake pictures</string>
+    <string name="edit_mistake_answer_content_hint">Please enter mistake answer content.</string>
+    <string name="mistake_answer_pictures">Mistake answer pictures</string>
+    <string name="edit_mistake_remark_content_hint">Please enter mistake remark content.</string>
+
+    <string name="bind">Bind</string>
+    <string name="bind_child">Bind child</string>
+    <string name="bind_failed">Bind failed</string>
+    <string name="bind_success">Bind successfully</string>
+    <string name="edit_child_name_hint">Please enter the name of the child.</string>
+    <string name="add_date">Add date:</string>
+    <string name="mistake_detail">Mistake detail</string>
+    <string name="answer_detail">Answer detail</string>
+    <string name="delete_btn">Delete</string>
+
+    <string name="my_post">My position:</string>
+    <string name="finish">Finish</string>
+    <string name="name">Name:</string>
+    <string name="sex">Sex:</string>
+    <string name="empty">Empty</string>
+
+    <string name="have_not_join_class">You haven\'t joined class yet！</string>
+    <string name="have_join_class">You have joined class！</string>
+    <string name="have_no_message">You have no message yet!</string>
+    <string name="have_no_child">You haven\'t bound your children yet！</string>
+    <string name="have_no_class">You have no class yet！</string>
+    <string name="have_no_work">You have no homework yet！</string>
+    <string name="have_no_mistake_book">You have no mistake book yet！</string>
+    <string name="have_no_mistake">You have no mistake yet！</string>
+    <string name="teacher_have_no_mobile">Unbound mobile phone number</string>
+    <string name="child_have_no_class">Your child has not join class yet！</string>
+    <string name="child_have_no_mistake_book">Your child has no mistake book yet！</string>
+    <string name="child_have_no_mistake">Your child has no mistake yet！</string>
+    <string name="child_home_work_have_not_submit">Your child has not submitted homework yet!</string>
+
+    <string name="hold_to_talk">Hold to talk</string>
+    <string name="play">Play</string>
+
+    <string name="student_menu_join_class">Join class</string>
+    <string name="student_menu_class">Class</string>
+    <string name="student_menu_homework">Homework</string>
+    <string name="student_menu_curriculum">Curriculum</string>
+    <string name="student_menu_mistakes">Mistakes</string>
+    <string name="student_menu_quiz">Quiz</string>
+    <string name="quiz_detail">Quiz detail</string>
+
+    <string name="download_success">Download successfully</string>
+    <string name="download_failed">Download failed</string>
+    <string name="app_update_failed">Update failed, please scan the QR code to download the latest version</string>
+    <string name="download_click_open">Click Open after Download</string>
+    <string name="open_permission">Open permissions to allow automatic installation of Monjaz</string>
+
+    <string name="say_something">Say something</string>
+    <string name="plz_say_something">Please enter what you want to say.</string>
+
+    <string name="update_hints">Update hints</string>
+    <string name="update_btn">Update</string>
+    <string name="plz_enable_system_download">Please enable system download</string>
+    <string name="received">Received</string>
+    <string name="send">Send</string>
+    <string name="sent">Sent</string>
+    <string name="send_failed">Send failed</string>
+    <string name="send_success">Send successfully</string>
+    <string name="pay_success">Pay successfully</string>
+    <string name="pay_failed">Pay failed</string>
+    <string name="reply">Reply:</string>
+    <string name="edit_user_phone_hint">Please enter your phone.</string>
+    <string name="edit_user_email_hint">Please enter your E-mail.</string>
+    <string name="child_learn_status">Child\'s learning situation</string>
+    <string name="num_of_homework_times">Number of homework completed in a month:</string>
+    <string name="num_of_mistake_books">Number of mistake books:</string>
+    <string name="num_of_mistakes">Number of mistakes added in a month:</string>
+    <string name="live_courses">Live broadcast course</string>
+</resources>
