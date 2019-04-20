@@ -244,4 +244,10 @@
     <string name="num_of_mistake_books">Number of mistake books:</string>
     <string name="num_of_mistakes">Number of mistakes added in a month:</string>
     <string name="live_courses">Live broadcast course</string>
+    <string name="string_state_ready">Ready</string>
+    <string name="string_state_preparing">PREPARING</string>
+    <string name="string_state_connecting">CONNECTING</string>
+    <string name="string_state_streaming">STREAMING</string>
+    <string name="flash_light_on">ON</string>
+    <string name="flash_light_off">OFF</string>
 </resources>

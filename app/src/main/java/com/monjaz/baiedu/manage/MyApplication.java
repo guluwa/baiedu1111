@@ -10,6 +10,7 @@ import androidx.multidex.MultiDexApplication;
 import com.bilibili.boxing.BoxingMediaLoader;
 import com.monjaz.baiedu.ui.service.MessageService;
 import com.monjaz.baiedu.utils.BoxingGlideLoader;
+import com.qiniu.pili.droid.streaming.StreamingEnv;
 import com.xdandroid.hellodaemon.DaemonEnv;
 import io.reactivex.plugins.RxJavaPlugins;
 
@@ -26,6 +27,7 @@ public class MyApplication extends MultiDexApplication {
 
         mContext = this;
 
+        StreamingEnv.init(getApplicationContext());
         initBoxing();
         initSharePic();
         handleError();

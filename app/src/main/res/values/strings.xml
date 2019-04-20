@@ -243,4 +243,10 @@
     <string name="num_of_mistake_books">错题集数量：</string>
     <string name="num_of_mistakes">一个月内添加错误的数量：</string>
     <string name="live_courses">直播课程</string>
+    <string name="string_state_ready">准备</string>
+    <string name="string_state_preparing">准备中</string>
+    <string name="string_state_connecting">连接中</string>
+    <string name="string_state_streaming">直播中</string>
+    <string name="flash_light_on">开</string>
+    <string name="flash_light_off">关</string>
 </resources>

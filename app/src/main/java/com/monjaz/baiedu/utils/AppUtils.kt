@@ -25,6 +25,8 @@ import java.util.*
 import android.app.ActivityManager.RunningAppProcessInfo
 import android.app.ActivityManager
 import android.util.Log
+import java.net.HttpURLConnection
+import java.net.URL
 
 
 object AppUtils {
@@ -290,5 +292,34 @@ object AppUtils {
             }
         }
         return false
+    }
+
+    fun syncRequest(appServerUrl: String): String? {
+        try {
+            val httpConn = URL(appServerUrl).openConnection() as HttpURLConnection
+            httpConn.requestMethod = "GET"
+            httpConn.connectTimeout = 5000
+            httpConn.readTimeout = 10000
+            val responseCode = httpConn.responseCode
+            if (responseCode != HttpURLConnection.HTTP_OK) {
+                return null
+            }
+
+            var length = httpConn.contentLength
+            if (length <= 0) {
+                length = 16 * 1024
+            }
+            val inputStream = httpConn.inputStream
+            val data = ByteArray(length)
+            val read = inputStream.read(data)
+            inputStream.close()
+            return if (read <= 0) {
+                null
+            } else String(data, 0, read)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+        return null
     }
 }

@@ -47,18 +47,23 @@ class MainNewActivity : BaseActivity(), View.OnClickListener {
     private fun initViewPager() {
         with(mTitles) {
             add(getString(R.string.home))
-            if (type == "2") {
+            if (type != "3") {
                 add(getString(R.string.live))
             }
             add(getString(R.string.message))
             add(getString(R.string.me))
         }
         with(mPagers) {
-            if (type != "2") {
-                add(HomeFragment.newInstance())
-            } else {
-                add(StudentHomeFragment.newInstance())
-                add(LiveFragment.newInstance())
+            when {
+                type == "3" -> add(HomeFragment.newInstance())
+                type == "2" -> {
+                    add(StudentHomeFragment.newInstance())
+                    add(LiveFragment.newInstance())
+                }
+                else -> {
+                    add(StudentHomeFragment.newInstance())
+                    add(TeacherLiveFragment.newInstance())
+                }
             }
             add(MessageFragment.newInstance())
             add(MeFragment.newInstance())
@@ -95,7 +100,7 @@ class MainNewActivity : BaseActivity(), View.OnClickListener {
                                             R.color.bot_nav_text_select_color
                                     )
                             )
-                            if (type != "2") {
+                            if (type == "3") {
                                 view.findViewById<View>(R.id.ivBotNavPic)
                                         .setBackgroundResource(R.drawable.ic_bot_nav_message_select)
                             } else {
@@ -110,7 +115,7 @@ class MainNewActivity : BaseActivity(), View.OnClickListener {
                                             R.color.bot_nav_text_select_color
                                     )
                             )
-                            if (type != "2") {
+                            if (type == "3") {
                                 view.findViewById<View>(R.id.ivBotNavPic)
                                         .setBackgroundResource(R.drawable.ic_bot_nav_me_select)
                             } else {
@@ -143,12 +148,12 @@ class MainNewActivity : BaseActivity(), View.OnClickListener {
                 textView.setTextColor(ContextCompat.getColor(this@MainNewActivity, R.color.bot_nav_text_default_color))
                 when (mLastPosition) {
                     0 -> view.findViewById<View>(R.id.ivBotNavPic).setBackgroundResource(R.drawable.ic_bot_nav_home_normal)
-                    1 -> if (type != "2") {
+                    1 -> if (type == "3") {
                         view.findViewById<View>(R.id.ivBotNavPic).setBackgroundResource(R.drawable.ic_bot_nav_message_normal)
                     } else {
                         view.findViewById<View>(R.id.ivBotNavPic).setBackgroundResource(R.drawable.ic_bot_nav_live_normal)
                     }
-                    2 -> if (type != "2") {
+                    2 -> if (type == "3") {
                         view.findViewById<View>(R.id.ivBotNavPic).setBackgroundResource(R.drawable.ic_bot_nav_me_normal)
                     } else {
                         view.findViewById<View>(R.id.ivBotNavPic).setBackgroundResource(R.drawable.ic_bot_nav_message_normal)
@@ -160,7 +165,7 @@ class MainNewActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun initNavigation() {
-        if (type != "2") {
+        if (type == "3") {
             val width = AppUtils.getDisplayMetrics(this).widthPixels / 3
             for (i in 0..2) {
                 val view = LayoutInflater.from(this).inflate(R.layout.home_bot_nav_item, null, false)
@@ -233,7 +238,7 @@ class MainNewActivity : BaseActivity(), View.OnClickListener {
     }
 
     fun goMessagePage() {
-        if (type == "2") {
+        if (type != "3") {
             mViewPager.currentItem = 2
         } else {
             mViewPager.currentItem = 1

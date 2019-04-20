@@ -10,6 +10,7 @@ import com.monjaz.baiedu.data.bean.remote.ClassInfoBean
 import com.monjaz.baiedu.data.bean.remote.MessageListBean
 import com.monjaz.baiedu.data.bean.remote.PageTipBean
 import com.monjaz.baiedu.databinding.ClassTeacherItemBinding
+import com.monjaz.baiedu.databinding.LiveClassTeacherItemBinding
 import com.monjaz.baiedu.ui.listener.OnClickListener
 
 class LiveClassTeacherListAdapter(var list: MutableList<Any>, val listener: OnClickListener) :
@@ -33,7 +34,7 @@ class LiveClassTeacherListAdapter(var list: MutableList<Any>, val listener: OnCl
                     LayoutInflater.from(parent.context), R.layout.page_list_tip_item, parent, false))
         } else {
             ViewHolder(DataBindingUtil.inflate(
-                    LayoutInflater.from(parent.context), R.layout.class_teacher_item, parent, false))
+                    LayoutInflater.from(parent.context), R.layout.live_class_teacher_item, parent, false))
         }
     }
 
@@ -59,7 +60,7 @@ class LiveClassTeacherListAdapter(var list: MutableList<Any>, val listener: OnCl
         }
     }
 
-    inner class ViewHolder(val databinding: ClassTeacherItemBinding) : RecyclerView.ViewHolder(databinding.root) {
+    inner class ViewHolder(val databinding: LiveClassTeacherItemBinding) : RecyclerView.ViewHolder(databinding.root) {
         init {
             databinding.root.setOnClickListener {
                 if (adapterPosition != -1) {
