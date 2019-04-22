@@ -44,7 +44,7 @@ class TeacherLiveFragment : LazyFragment() {
     private fun initToolBar() {
         tvToolBarTitle.text = getString(R.string.live)
         ivBack.visibility = View.GONE
-        tvRightBtn.text = ""
+        tvRightBtn.text = getString(R.string.open_live)
         tvRightBtn.visibility = View.VISIBLE
         tvRightBtn.setOnClickListener {
             Thread(Runnable {

@@ -61,7 +61,7 @@ class MainNewActivity : BaseActivity(), View.OnClickListener {
                     add(LiveFragment.newInstance())
                 }
                 else -> {
-                    add(StudentHomeFragment.newInstance())
+                    add(HomeFragment.newInstance())
                     add(TeacherLiveFragment.newInstance())
                 }
             }

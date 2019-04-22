@@ -1,5 +1,8 @@
 package com.monjaz.baiedu.ui.main.live
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.content.pm.ActivityInfo
 import android.hardware.Camera
 import android.util.Log
@@ -45,17 +48,17 @@ class LiveRecordActivity : BaseActivity(), StreamingStateChangedListener {
         mProfile = StreamingProfile()
         try {
             mProfile!!.setVideoQuality(StreamingProfile.VIDEO_QUALITY_HIGH1)
-                    .setAudioQuality(StreamingProfile.AUDIO_QUALITY_MEDIUM2)
-                    .setQuicEnable(false)//RMPT or QUIC
-                    .setVideoQuality(StreamingProfile.VIDEO_QUALITY_MEDIUM1)
-                    .setEncodingOrientation(StreamingProfile.ENCODING_ORIENTATION.PORT)//横竖屏
-                    .setEncodingSizeLevel(StreamingProfile.VIDEO_ENCODING_HEIGHT_720)
-                    .setBitrateAdjustMode(StreamingProfile.BitrateAdjustMode.Auto)//自适应码率
-                    .setEncoderRCMode(StreamingProfile.EncoderRCModes.QUALITY_PRIORITY)
-                    .setDnsManager(getMyDnsManager())
-                    .setStreamStatusConfig(StreamingProfile.StreamStatusConfig(3))
-                    .setSendingBufferProfile(StreamingProfile.SendingBufferProfile(0.2f, 0.8f, 3.0f, (20 * 1000).toLong()))
-                    .publishUrl = mLiveUrl//设置推流地址
+                .setAudioQuality(StreamingProfile.AUDIO_QUALITY_MEDIUM2)
+                .setQuicEnable(false)//RMPT or QUIC
+                .setVideoQuality(StreamingProfile.VIDEO_QUALITY_MEDIUM1)
+                .setEncodingOrientation(StreamingProfile.ENCODING_ORIENTATION.PORT)//横竖屏
+                .setEncodingSizeLevel(StreamingProfile.VIDEO_ENCODING_HEIGHT_720)
+                .setBitrateAdjustMode(StreamingProfile.BitrateAdjustMode.Auto)//自适应码率
+                .setEncoderRCMode(StreamingProfile.EncoderRCModes.QUALITY_PRIORITY)
+                .setDnsManager(getMyDnsManager())
+                .setStreamStatusConfig(StreamingProfile.StreamStatusConfig(3))
+                .setSendingBufferProfile(StreamingProfile.SendingBufferProfile(0.2f, 0.8f, 3.0f, (20 * 1000).toLong()))
+                .publishUrl = mLiveUrl//设置推流地址
 
             requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT//竖屏
 
@@ -66,13 +69,19 @@ class LiveRecordActivity : BaseActivity(), StreamingStateChangedListener {
 
         val setting = CameraStreamingSetting()
         setting.setCameraId(Camera.CameraInfo.CAMERA_FACING_BACK) // 摄像头切换
-                .setContinuousFocusModeEnabled(true)//开启对焦
-                .setFocusMode(CameraStreamingSetting.FOCUS_MODE_CONTINUOUS_VIDEO)//自动对焦
-                .setBuiltInFaceBeautyEnabled(true)//开启美颜
-                .setFaceBeautySetting(CameraStreamingSetting.FaceBeautySetting(1.0f, 1.0f, 0.7f))// 磨皮，美白，红润 取值范围为[0.0f, 1.0f]
-                .setVideoFilter(CameraStreamingSetting.VIDEO_FILTER_TYPE.VIDEO_FILTER_BEAUTY)
-                .setCameraPrvSizeLevel(CameraStreamingSetting.PREVIEW_SIZE_LEVEL.MEDIUM)
-                .setCameraPrvSizeRatio(CameraStreamingSetting.PREVIEW_SIZE_RATIO.RATIO_16_9)
+            .setContinuousFocusModeEnabled(true)//开启对焦
+            .setFocusMode(CameraStreamingSetting.FOCUS_MODE_CONTINUOUS_VIDEO)//自动对焦
+            .setBuiltInFaceBeautyEnabled(true)//开启美颜
+            .setFaceBeautySetting(
+                CameraStreamingSetting.FaceBeautySetting(
+                    1.0f,
+                    1.0f,
+                    0.7f
+                )
+            )// 磨皮，美白，红润 取值范围为[0.0f, 1.0f]
+            .setVideoFilter(CameraStreamingSetting.VIDEO_FILTER_TYPE.VIDEO_FILTER_BEAUTY)
+            .setCameraPrvSizeLevel(CameraStreamingSetting.PREVIEW_SIZE_LEVEL.MEDIUM)
+            .setCameraPrvSizeRatio(CameraStreamingSetting.PREVIEW_SIZE_RATIO.RATIO_16_9)
         mMediaStreamingManager = MediaStreamingManager(this, cameraPreview_surfaceView, SW_VIDEO_WITH_SW_AUDIO_CODEC)
         mMediaStreamingManager!!.prepare(setting, mProfile)
         mMediaStreamingManager!!.setStreamingStateListener(this)
@@ -110,7 +119,10 @@ class LiveRecordActivity : BaseActivity(), StreamingStateChangedListener {
             StreamingState.SENDING_BUFFER_FULL -> Log.d(TAG, "onStateChanged: ===>" + "发送缓冲区满")
             StreamingState.AUDIO_RECORDING_FAIL -> Log.d(TAG, "onStateChanged: ===>" + "录音失败")
             StreamingState.OPEN_CAMERA_FAIL -> Log.d(TAG, "onStateChanged: ===>" + "相机打开失败")
-            StreamingState.DISCONNECTED -> Log.d(TAG, "onStateChanged: ===>" + "断开连接")
+            StreamingState.DISCONNECTED -> {
+                Log.d(TAG, "onStateChanged: ===>" + "断开连接")
+                showToastMsg("直播结束")
+            }
         }
     }
 

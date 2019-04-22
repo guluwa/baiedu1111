@@ -250,4 +250,5 @@
     <string name="string_state_streaming">STREAMING</string>
     <string name="flash_light_on">ON</string>
     <string name="flash_light_off">OFF</string>
+    <string name="open_live">Open Live</string>
 </resources>

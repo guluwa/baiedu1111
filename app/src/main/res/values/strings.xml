@@ -249,4 +249,5 @@
     <string name="string_state_streaming">直播中</string>
     <string name="flash_light_on">开</string>
     <string name="flash_light_off">关</string>
+    <string name="open_live">开启直播</string>
 </resources>

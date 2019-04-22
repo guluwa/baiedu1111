@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
+import android.view.View
 import com.monjaz.baiedu.R
 import com.monjaz.baiedu.base.BaseActivity
 import com.pili.pldroid.player.PLOnBufferingUpdateListener
@@ -25,12 +26,13 @@ class LiveWatchActivity : BaseActivity() {
             if (!TextUtils.isEmpty(etLiveUrl.text)) {
                 mVideoPlayer.setVideoPath(etLiveUrl.text.toString().trim())
                 mVideoPlayer.start()
+                mVideoPlayer.visibility = View.VISIBLE
             }
         }
     }
 
     private fun initVideoPlayer() {
-        mVideoPlayer.displayAspectRatio = PLVideoView.ASPECT_RATIO_ORIGIN
+        mVideoPlayer.displayAspectRatio = PLVideoView.ASPECT_RATIO_PAVED_PARENT
         mVideoPlayer.setOnInfoListener(mOnInfoListener)
         mVideoPlayer.setOnBufferingUpdateListener(mOnBufferingUpdateListener)
         mVideoPlayer.setOnCompletionListener(mOnCompletionListener)
@@ -61,7 +63,7 @@ class LiveWatchActivity : BaseActivity() {
             }
             PLOnInfoListener.MEDIA_INFO_VIDEO_RENDERING_START -> {
                 showToastMsg("first video render time: " + extra + "ms")
-                Log.i(TAG, "Response: " + mVideoPlayer.getResponseInfo())
+                Log.i(TAG, "Response: " + mVideoPlayer.responseInfo)
             }
             PLOnInfoListener.MEDIA_INFO_AUDIO_RENDERING_START -> {
             }
@@ -69,7 +71,7 @@ class LiveWatchActivity : BaseActivity() {
             PLOnInfoListener.MEDIA_INFO_AUDIO_FRAME_RENDERING -> Log.i(TAG, "audio frame rendering, ts = $extra")
             PLOnInfoListener.MEDIA_INFO_VIDEO_GOP_TIME -> Log.i(TAG, "Gop Time: $extra")
             PLOnInfoListener.MEDIA_INFO_SWITCHING_SW_DECODE -> Log.i(TAG, "Hardware decoding failure, switching software decoding!")
-            PLOnInfoListener.MEDIA_INFO_METADATA -> Log.i(TAG, mVideoPlayer.getMetadata().toString())
+            PLOnInfoListener.MEDIA_INFO_METADATA -> Log.i(TAG, mVideoPlayer.metadata.toString())
             PLOnInfoListener.MEDIA_INFO_VIDEO_BITRATE, PLOnInfoListener.MEDIA_INFO_VIDEO_FPS -> updateStatInfo()
             PLOnInfoListener.MEDIA_INFO_CONNECTED -> Log.i(TAG, "Connected !")
             PLOnInfoListener.MEDIA_INFO_VIDEO_ROTATION_CHANGED -> Log.i(TAG, "Rotation changed: $extra")
